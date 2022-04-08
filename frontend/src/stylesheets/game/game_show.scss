@@ -1,0 +1,99 @@
+.game-show-container {
+  overflow-y: auto;
+  justify-content: center;
+  display: flex;
+  background: linear-gradient(180deg, $dark-blue,$light-blue);
+
+}
+
+
+.game-show-item {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 66%;
+
+
+  h1 {
+    font-family: $serif;
+    color: $lightest-tan;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: .2rem;
+    margin: 2rem;
+
+  }
+  h2 {
+    color: $text-blue;
+    padding: 1%;
+    align-self: center;
+    margin: 1rem;
+  }
+  p {
+    color: $text-blue;
+    text-justify: auto;
+    text-align: justify;
+    padding: 1%;
+    align-self: center;
+    margin: 1rem;
+    font-style: italic;
+    overflow-wrap: break-word;
+    
+  }
+  img {
+    color: $lightest-tan;
+    margin-bottom: 2rem;
+    max-height: 50vh;
+    width: auto;
+    box-shadow:  4px 4px 4px black;
+    border-radius: 6px;
+  }
+}
+
+.game-details{
+  border-radius: 6px;
+  background: radial-gradient(circle, $body-lightest 1%, $lightest-tan 100%);
+  text-align: center;
+  align-content: center;
+  padding: 1rem 1.5rem;
+  width: 66%;
+  
+}
+
+.button--add-game-to-library {
+  width: 25vh;
+  height: 6vh;
+  color: $lightest-tan;
+  background: $text-blue;
+  box-shadow: inset;
+  &:hover {
+    background: $yellow;
+    box-shadow:  4px 4px 4px black;
+    color: $body-lightest;
+    cursor: pointer;
+  }
+  &:active{
+    transform: scale(0.98);
+    box-shadow:  4px 4px 4px black;
+  }
+} 
+
+.button--added-to-library {
+  opacity: 0.4;
+  &:hover {
+    background: $text-blue;
+    box-shadow:  inherit;
+    color: $lightest-tan;
+    cursor: not-allowed;
+  }
+  &:active{
+    transform: scale(1);
+    box-shadow:  none;
+  }
+}
+
+#add-game-container {
+  margin: 2rem;
+  padding-bottom: 2rem;
+}

@@ -1,0 +1,86 @@
+.library-container {
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-row: 1 / 13;
+  grid-column: 1 / 13;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(330deg, $dark-blue,$light-green);
+  overflow-y: auto; 
+}
+
+.welcome-msg--library {
+  font-family: $serif;
+  font-weight: bold;
+  grid-row: 2 / 3;
+  grid-column: 3 / 7;
+  font-size: 1.5rem;
+  color: $body-lightest;
+  text-shadow: 1px 1px black;
+
+}
+
+.button {
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: .75rem;
+  padding: .2rem;
+  width: 15vh;
+  height: 5vh;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $sans-serif;
+  font-weight: bold;
+  color: $dark-green;
+  background: linear-gradient(225deg,$lightest-tan, $body-lightest);
+  &:hover {
+    background: $body-lightest;
+    box-shadow:  4px 4px 4px black;
+    color: $light-green;
+    box-shadow: inset;
+    cursor: pointer;
+  }
+  &:active{
+    transform: scale(0.98);
+    box-shadow:  4px 4px 4px black;
+  }
+}
+
+.button--add-game, .button--all-games {
+  grid-row: 2 / 3;
+  grid-column: 9 / 11;
+  justify-self: right;
+  text-decoration: none;
+  
+}
+
+.button-container {
+  grid-column: 8/11;
+  grid-row: 2 / 3;
+  display: flex;
+  justify-content: space-around;
+}
+
+.library-index-container {
+  border-radius: 4px;
+  grid-row: 3 / 12;
+  grid-column: 3 / 11;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.library-index-list {
+  margin-top: 1rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  row-gap: 2rem;
+  column-gap: 2rem;
+}
+

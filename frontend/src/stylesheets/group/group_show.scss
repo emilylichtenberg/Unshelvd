@@ -1,0 +1,137 @@
+
+.group-show-container {
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-row: 1 / 13;
+  grid-column: 1 / 13;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  background-color: $body-lightest;
+  background: linear-gradient(171deg, rgba(245,241,231,1) 10%, rgba(255,254,252,1) 100%);
+  color: $text-blue;
+}
+
+.gs-sub-header {
+  display: flex;
+  grid-row: 2 / 3;
+  grid-column: 3 / 11;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem;
+  color: $text-blue;
+  h1 {
+    font-family: $serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-decoration: underline;
+    cursor: default;
+  }
+}
+
+.btn--share-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $dark-blue;
+  border-radius: 4px;
+  padding: 0.5rem;
+  width: 7rem;
+  transition:all 1s ease;
+  margin-right: 1rem;
+  &:hover {
+    transform: scale(1.05);
+    transition: all .4s ease;
+    background: radial-gradient(circle, $light-blue 40%, $light-blue 100%);
+    color: $body-lightest;
+    font-weight: 500;
+    cursor: text;
+  }
+}
+.btn--leave-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $dark-blue;
+  border-radius: 4px;
+  padding: 0.5rem;
+  width: 7rem;
+  transition:all 1s ease;
+  &:hover {
+    transform: scale(1.05);
+    transition: all .4s ease;
+    background: radial-gradient(circle, $light-red 40%, $light-red 100%);
+    border: 1px solid $dark-red;
+    color: $body-lightest;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
+
+
+
+.gs-content {
+  grid-row: 3 / 13;
+  grid-column: 3 / 11;
+  display: grid;
+  border-radius: 6px;
+  overflow: visible;
+  margin-bottom: 3rem;
+}
+
+.gs-user-list-container {
+  border: $beige solid 2px;
+  border-radius: 6px;
+  grid-row: 3 / 11;
+  grid-column: 1 / 4;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  
+  h2 {
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 700;
+    color: $text-blue;
+    text-decoration: underline;
+  }
+}
+
+.gs-user-li {
+  display: flex;
+  padding-top: 1rem;
+  color: $text-blue;
+}
+
+
+.gs-games-container {
+  border: $beige solid 2px;
+  border-radius: 6px;
+  grid-row: 3 / 11;
+  grid-column: 4 / 13;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+}
+
+.gs-games-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 1rem;
+  justify-content: space-around;
+  z-index: 1;
+  row-gap: 2rem;
+  column-gap: 1rem;
+}
+
+.gs-game-item {
+  display: flex;
+  border: 1px solid gray;
+  width: 20vh;
+  height: 20vh;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}

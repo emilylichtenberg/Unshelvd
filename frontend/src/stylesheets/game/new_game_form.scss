@@ -1,0 +1,225 @@
+.new-game-form-container {
+  color: $dark-blue;
+  overflow-y: auto;
+  grid-row: 1 / 11;
+  grid-column: 1 / 13;
+  font: inherit;
+  .asterik {
+    color: red;
+  }
+}
+
+.game-form-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  align-self: flex-end;
+  font-size: 2rem;
+  grid-column: 3/11;
+  padding: 1%;
+  font-family: $serif;
+  color: $dark-brown;
+}
+
+.new-game-form {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  height: 100%;
+  width: 100%;
+  grid-column: 3/11;
+  font-family: $sans-serif;
+}
+
+.game-form-name {
+  display: flex;
+  grid-column: 3/11;
+  padding-top: 2%;
+  font-weight: bold;
+  label{ 
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  input {
+    margin-left: 1%;
+    padding: .5%;
+    width: 20%;
+    font-family: $sans-serif;
+
+  }
+}
+
+.game-form-numplayers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2%;
+  grid-column: 3/11;
+  span {
+    font-weight: bold;
+  }
+  div {
+    width: 100%;
+    text-align: center;
+  }
+  label {
+    width: 100%;
+  }
+  input {
+    width: 4vw;
+    height: 2vh;
+    margin: .5%;
+    font-family: $sans-serif;
+  }
+}
+
+.add-game-input {
+  margin: 1%;
+  text-align: center;
+  max-width: 7rem;
+}
+input.add-game-input {
+  height: 50px;
+  width: 50px;
+  transform: scale(2);
+  padding: 10px;
+}
+
+.game-form-category {
+  padding-top: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-column: 3/11;
+  h2 {
+    font-weight: bold;
+  }
+  div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  label {
+    padding: 1%;
+
+  }
+}
+
+.game-form-descriptors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2%;
+  grid-column: 3/11;
+  h2 {
+    font-weight: bold;
+  }
+  div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  label {
+    padding: 1%;
+  }
+}
+
+.game-form-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2%;
+  grid-column: 3/11;
+  h2 {
+    font-weight: bold;
+  }
+  div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  label {
+    padding: 1%;
+  }
+}
+
+.game-form-description {
+  font-family: $sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2%;
+  align-items: center;
+  grid-column: 3/11;
+  label{ 
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+  }
+  textarea {
+    font-family: $sans-serif;
+    width: 30%;
+    height: 70%;
+    align-self: center;
+    padding: .5%;
+    margin-top: .5%;
+    font-family: $sans-serif;
+  }
+}
+
+.game-form-rules {
+  display: flex;
+  grid-column: 3/11;
+  padding-top: 2%;
+  font-weight: bold;
+  label{ 
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  input {
+    margin-left: 1%;
+    font-family: $sans-serif;
+  }
+}
+
+.game-form-submit {
+  display: flex;
+  justify-content: center;
+  padding-top: 2%;
+  align-items: center;
+  grid-column: 3/11;
+  input {
+    border: 1px solid $dark-blue;
+    background-color: white;
+    border-radius: 4px;
+    padding: .5rem;
+    color: $dark-blue;
+    cursor: pointer;
+    &:hover {
+      background-color: $light-blue;
+      color: white;
+      box-shadow: 2px 2px 10px black;
+    }
+  }
+}
+
+.game-errors {
+  grid-column: 3/11;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+  color: $dark-red;
+  list-style: none;
+}

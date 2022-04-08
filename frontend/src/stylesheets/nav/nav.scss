@@ -1,0 +1,57 @@
+.nav-container {
+  display: grid;
+  height: 8vh;
+  width: 100%;
+  border: 1px solid black;
+  grid-template-columns: .5fr 1fr 7fr 1fr .5fr;
+  grid-template-rows: 100% ;
+  align-items: center;
+  background-color: $lightest-tan;
+  position: sticky;
+}
+
+#logo {
+  grid-column: 2 / 3;
+  font-family: $unshelvd;
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: $light-blue;
+}
+
+.nav-main-links {
+  grid-column: 3 / 4;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  font-size: 1.5rem;
+  .active {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  :any-link {
+    text-decoration: none;
+    color: $light-blue;
+  }
+}
+
+#logout-button {
+  color: $light-blue;
+  font-size: 1.5rem;
+  grid-column: 4/5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: 1px solid $light-blue;
+  border-radius: 4px;
+  padding: 0.4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition: ease 500ms;
+  width: fit-content;
+  &:hover {
+    background-color: $light-blue;
+    color: white;
+    transition: ease 500ms; 
+  }
+}
