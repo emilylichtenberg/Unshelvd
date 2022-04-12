@@ -83,7 +83,7 @@ class SuggestForm extends React.Component{
         const userPoolId = currentGroups[this.state.library]?.users
         let gamePool = []
 
-        for (let i = 0; i < userPoolId.length; i++) {
+        for (let i = 0; i < userPoolId?.length; i++) {
             gamePool = gamePool.concat(allUsers[userPoolId[i]]?.games)
         }
         const realGamePool = gamePool.filter(item => {
@@ -151,7 +151,7 @@ class SuggestForm extends React.Component{
 
                     {/* LIBRARY SELECTOR */}
                     <div className='suggest-form-library'>
-                        <h3>Choose a library:
+                        <h3>Choose a library:</h3>
                         <div>
                             <select onChange={this.update("library")}>
                                     <option value ></option>
@@ -160,12 +160,11 @@ class SuggestForm extends React.Component{
                             })}
                             </select>
                         </div>
-                        </h3>
                     </div>
 
                     {/* NUMBER OF PLAYERS SELECTOR */}
                     <div className='suggest-form-numplayers'>
-                        <h3>Number of Players:
+                        <h3>Number of Players:</h3>
                             <div>
                                 <select onChange={this.update("numPlayers")}>
                                     <option value ></option>
@@ -182,7 +181,6 @@ class SuggestForm extends React.Component{
                                     <option value="12">12+</option>
                                 </select>
                             </div>
-                        </h3>
                     </div>
 
 
