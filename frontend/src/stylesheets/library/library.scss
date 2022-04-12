@@ -18,14 +18,14 @@
   grid-row: 2 / 3;
   grid-column: 3 / 7;
   font-size: 1.5rem;
-  color: $body-lightest;
-  text-shadow: 1px 1px black;
+  color: $dark-blue;
+  // text-shadow: 1px 1px black;
 
 }
 
 .button {
   text-decoration: none;
-  border-radius: 4px;
+  // border-radius: 4px;
   font-size: .75rem;
   padding: .2rem;
   width: 15vh;
@@ -37,6 +37,7 @@
   font-family: $sans-serif;
   font-weight: bold;
   color: $dark-green;
+  border: 1px solid $dark-green;
   background: linear-gradient(225deg,$lightest-tan, $body-lightest);
   &:hover {
     background: $body-lightest;

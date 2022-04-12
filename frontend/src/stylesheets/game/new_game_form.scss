@@ -1,8 +1,10 @@
 .new-game-form-container {
   color: $dark-blue;
+  height: 100%;
   overflow-y: auto;
   grid-row: 1 / 11;
   grid-column: 1 / 13;
+  background: linear-gradient(171deg, rgb(247, 245, 241) 10%, rgba(255,254,252,1) 100%);
   font: inherit;
   .asterik {
     color: red;
