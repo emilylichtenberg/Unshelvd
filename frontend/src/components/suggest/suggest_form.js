@@ -144,14 +144,14 @@ class SuggestForm extends React.Component{
             <div className='suggest-form-container'>
 
                 <div className='suggest-form-header'>
-                    Suggest a Game
+                    Get a Suggestion
                 </div>
 
                 <form id="suggest-form" className='suggest-form' onSubmit={this.handleSubmit}>
 
                     {/* LIBRARY SELECTOR */}
                     <div className='suggest-form-library'>
-                        <h3>Find game from:
+                        <h3>Choose a library:
                         <div>
                             <select onChange={this.update("library")}>
                                     <option value ></option>
@@ -189,7 +189,7 @@ class SuggestForm extends React.Component{
                     {/* CATEGORY SELECTOR */}
                     <div className='suggest-form-category'>
                         
-                        <h2>Pick a category!</h2>
+                        <h2>Category:</h2>
                             <div className='category-grid'>
                                 {categories.map((category) => (
                                     <label className='category-grid-item'>
