@@ -4,13 +4,14 @@
   height: 20vh;
   display: flex;
   justify-content: center;
-  border: 1px solid $body-lightest;
+  // border: 1px solid $body-lightest;
+  border: 1px solid lightgray;
   border-radius: 4px;
   background-color: $body-lightest;
   cursor: pointer;
   box-shadow:  4px 4px 4px black;
     &:hover {
-      transform: scale(1.5);
+      transform: scale(1.1);
       transition: all .4s ease;
       border-radius: 4px;
       background-color: black;
