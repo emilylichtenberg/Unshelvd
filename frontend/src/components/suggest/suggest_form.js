@@ -85,11 +85,11 @@ class SuggestForm extends React.Component{
 
         for (let i = 0; i < userPoolId?.length; i++) {
             gamePool = gamePool.concat(allUsers[userPoolId[i]]?.games)
+            // debugger
         }
-        const realGamePool = gamePool.filter(item => {
-            if (item) return item
-        })
-
+        // const realGamePool = gamePool.filter(item => {if (item) return item})
+        const realGamePool = gamePool
+        // debugger
         for (let i = 0; i < realGamePool.length; i++) {
             if (!filteredGames.includes(allGames[realGamePool[i]])) {
                 filteredGames.push(allGames[realGamePool[i]])
@@ -126,6 +126,7 @@ class SuggestForm extends React.Component{
     }
 
     renderErrors() {
+        // debugger
         return(
             <ul>
                 {Object.keys(this.state.errors).map((error, i) => (
@@ -241,7 +242,7 @@ class SuggestForm extends React.Component{
                         </div> 
                         : 
                         <div className='result-null'>
-                            Go Fish to find games!
+                            {/* Go Fish to find games! */}
                         </div>
                     }
                     </div>
