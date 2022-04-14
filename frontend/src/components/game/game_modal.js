@@ -17,6 +17,7 @@
 
   addGameLibrary() {
     let updatedUser = this.props.currentUser
+    // debugger
     updatedUser.games = this.props.currentUser.games.concat(this.props.modal._id)
     this.props.updateUser(updatedUser)
     this.setState({
@@ -66,7 +67,8 @@
             
             <div>
                 { 
-                (!currentUser.games?.includes(modal._id)) ?
+                // (!currentUser.games?.includes(modal._id)) ?
+                !this.state.inLibrary ?
                     <button className="button button--add-game-to-library" onClick={() => this.addGameLibrary()}>Add Game to Library</button> : 
                     <button className="button button--add-game-to-library" onClick={() => this.removeGameLibrary()}>Remove Game from Library</button>
                 }
